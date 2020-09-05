@@ -1009,7 +1009,11 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
         //actBootFirmware = menu->addAction("Launch DS menu");
         actBootFirmware = menu->addAction("Boot firmware");
         connect(actBootFirmware, &QAction::triggered, this, &MainWindow::onBootFirmware);
+        {
+        QMenu* submenu = menu->addMenu("recently opened");
+        
 
+        }
         menu->addSeparator();
 
         {
