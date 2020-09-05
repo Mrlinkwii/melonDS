@@ -240,6 +240,7 @@ public:
 
     QAction* actOpenROM;
     QAction* actBootFirmware;
+    QAction* actrecent; 
     QAction* actSaveState[9];
     QAction* actLoadState[9];
     QAction* actUndoStateLoad;
