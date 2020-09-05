@@ -1016,7 +1016,6 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
         for (int i = 1; i < 9; i++)
             {
 
-
             }
 
         }
