@@ -1010,8 +1010,13 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
         actBootFirmware = menu->addAction("Boot firmware");
         connect(actBootFirmware, &QAction::triggered, this, &MainWindow::onBootFirmware);
         {
-        QMenu* submenu = menu->addMenu("recently opened");
+        QMenu* submenu = menu->addMenu("recently played");
         
+
+        for (int i = 1; i < 9; i++)
+            {
+
+            }
 
         }
         menu->addSeparator();
