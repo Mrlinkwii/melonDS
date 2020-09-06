@@ -1015,8 +1015,8 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
 
         for (int i = 1; i < 9; i++)
             {
-                    actrecent[i] = submenu->addAction(QString("%1").arg(i));
-                    connect(actrecent[i], &QAction::triggered, this, &MainWindow::onSaveState);
+            
+
             }
 
         }
