@@ -1011,7 +1011,6 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
         connect(actBootFirmware, &QAction::triggered, this, &MainWindow::onBootFirmware);
         {
         QMenu* submenu = menu->addMenu("recently played");
-        
 
         for (int i = 1; i < 9; i++)
             {
