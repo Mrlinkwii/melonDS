@@ -245,7 +245,7 @@ public:
 
     QAction* actOpenROM;
     QAction* actBootFirmware;
-    QAction* actrecent; 
+    QAction* actRecent[5]; 
     QAction* actSaveState[9];
     QAction* actLoadState[9];
     QAction* actUndoStateLoad;

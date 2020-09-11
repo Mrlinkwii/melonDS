@@ -1015,10 +1015,11 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
         {
         QMenu* submenu = menu->addMenu("recently played");
 
-        for (int i = 1; i < 9; i++)
+        for (int i = 1; i < 5; i++)
             {
-                actSaveState[i] = submenu->addAction(QString(ROMPATH));
-                actSaveState[i]->setData(QVariant(i));
+                actRecent[i] = submenu->addAction(QString(filename));
+                //actRecent[i]->setData(QVariant(i));
+                //connect(actRecent[i], &QAction::triggered, this, &MainWindow::onOpenFile);
             }
 
         }
