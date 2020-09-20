@@ -1018,8 +1018,8 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
         for (int i = 1; i < 5; i++)
             {
                 actRecent[i] = submenu->addAction(QString(filename));
-                //actRecent[i]->setData(QVariant(i));
-                //connect(actRecent[i], &QAction::triggered, this, &MainWindow::onOpenFile);
+                actRecent[i]->setData(QVariant(i));
+                connect(actRecent[i], &QAction::triggered, this, &MainWindow::onRecentFile);
             }
 
         }
@@ -1525,7 +1525,15 @@ void MainWindow::onBootFirmware()
         emuThread->emuRun();
     }
 }
+void onResentFile(){
 
+    int slot = ((QAction*)sender())->data().toInt();
+    char filename[1024];
+    if (slot > 0)
+     Frontend::GetRecentName(slot, filename, 1024);
+
+    strncpy(filename.toStdString().c_str(), 1023);
+}
 void MainWindow::onSaveState()
 {
     int slot = ((QAction*)sender())->data().toInt();

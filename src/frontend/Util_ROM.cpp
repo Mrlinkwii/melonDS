@@ -440,6 +440,35 @@ int Reset()
 }
 
 
+void GetRecentName
+{
+    int pos;
+
+    if (ROMPath[ROMSlot_NDS][0] == '\0') // running firmware, no ROM
+    {
+        strcpy(filename, "firmware");
+        pos = 1;
+    }
+    else
+    {
+        int l = strlen(ROMPath[ROMSlot_NDS]);
+        pos = l;
+        while (ROMPath[ROMSlot_NDS][pos] != '.' && pos > 0) pos--;
+        if (pos == 0) pos = l;
+
+        // avoid buffer overflow. shoddy
+        if (pos > len-5) pos = len-5;
+
+        strncpy(&filename[0], ROMPath[ROMSlot_NDS], pos);
+    }
+
+    strcpy(&filename[pos], ".NDS");
+    filename[pos+3] = '0'+slot;
+    filename[pos+4] = '\0';
+
+
+}
+
 // SAVESTATE TODO
 // * configurable paths. not everyone wants their ROM directory to be polluted, I guess.
 

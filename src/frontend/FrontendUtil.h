@@ -77,6 +77,9 @@ int LoadBIOS();
 // note: loading a ROM to the NDS slot resets emulation
 int LoadROM(const char* file, int slot);
 
+// get the filename associated with the given recent game  slot (1-5)  
+int GetRecentName(int slot,char* filename )
+
 // unload the ROM loaded in the specified cart slot
 // simulating ejection of the cartridge
 void UnloadROM(int slot);

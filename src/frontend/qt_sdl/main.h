@@ -191,6 +191,7 @@ signals:
 
 private slots:
     void onOpenFile();
+    void onRecentFile();
     void onBootFirmware();
     void onSaveState();
     void onLoadState();
